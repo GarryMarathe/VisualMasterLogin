@@ -73,17 +73,17 @@ input::placeholder {
 .icon {
   position: absolute;
   top: 45%;
-  right: 70px;
+  right: 60px;
   transform: translateY(-50%);
   color: #bec3c8;
   font-size: 23px;
   z-index: 1;
 }
 
-.inputText .icon2 {
+.icon2 {
   position: absolute;
   top: 61%;
-  right: 70px;
+  right: 60px;
   transform: translateY(-50%);
   color: #bec3c8;
   font-size: 23px;
