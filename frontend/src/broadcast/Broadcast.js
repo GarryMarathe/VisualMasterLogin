@@ -44,8 +44,9 @@ const Broadcast = () => {
     XRP:'xrp.png',
     DOGE:'dogecoin.png',
     ADA:'cardano.png',
-     TRX: 'tron.png',
+    TRX: 'tron.png',
     SOL: 'solana.png',
+    AVAX: 'avalanche.png'
     // Add more cryptocurrencies as needed
   };
 

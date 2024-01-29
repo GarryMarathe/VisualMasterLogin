@@ -80,7 +80,7 @@ input::placeholder {
   z-index: 1;
 }
 
-.icon2 {
+.inputText .icon2 {
   position: absolute;
   top: 61%;
   right: 70px;

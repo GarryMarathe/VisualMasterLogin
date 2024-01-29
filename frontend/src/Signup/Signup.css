@@ -61,8 +61,8 @@ input::placeholder {
 
 #icon {
   position: absolute;
-  top: 38%;
-  right: 70px;
+  top: 37%;
+  right: 60px;
   transform: translateY(-50%);
   color: #bec3c8;
   font-size: 21px;
@@ -71,8 +71,8 @@ input::placeholder {
 
 #icon1 {
   position: absolute;
-  top: 52.5%;
-  right: 70px;
+  top: 53%;
+  right: 60px;
   transform: translateY(-50%);
   color: #bec3c8;
   font-size: 24px;
@@ -81,8 +81,8 @@ input::placeholder {
 
 #icon2 {
   position: absolute;
-  top: 67%;
-  right: 70px;
+  top: 69%;
+  right: 60px;
   transform: translateY(-50%);
   color: #bec3c8;
   font-size: 23px;
