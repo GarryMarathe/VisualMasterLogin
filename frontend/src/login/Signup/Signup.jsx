@@ -3,7 +3,7 @@ import "./Signup.css";
 import { Link ,Navigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
-import Layout from "../Layout";
+import Layout from "../../Layout";
 import Swal from 'sweetalert2';
 
 const Signup = () =>{    
@@ -36,7 +36,7 @@ const Signup = () =>{
                 // If signup is successful, set the state to redirect to home
                 Swal.fire({
                     title: "Good job!",
-                    text: "You clicked the button!",
+                    text: "You have successfully signed up!",
                     icon: "success"
                   });
                 setRedirectToHome(true);

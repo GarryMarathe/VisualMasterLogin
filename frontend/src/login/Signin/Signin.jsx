@@ -1,18 +1,20 @@
 import React, {useState} from 'react';
 import './Signin.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEyeSlash } from '@fortawesome/free-regular-svg-icons';
-import Layout from '../Layout';
+import Layout from '../../Layout';
+import Swal from 'sweetalert2';
 
 const Signin = () =>{
     const [username, setName] = useState('');
     const [password, setPassword] = useState('');
-    // const [signinMessage, setSigninMessage] = useState('');
+    const [signinMessage, setSigninMessage] = useState('');
+    const [redirectToHome, setRedirectToHome] = useState(false); // State to handle redirection
 
     const handelSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
             const response = await fetch('http://localhost:5000/login', {
                 method: 'POST',
@@ -24,16 +26,23 @@ const Signin = () =>{
                     password,
                 }),
             });
-
+    
             const data = await response.json();
-
+            console.log(data.message); 
+    
             if (response.ok) {
+
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                  });
+                setRedirectToHome(true);
                 // Signin successful, set the JWT token in localStorage
                 localStorage.setItem('jwtToken', data.access_token);
-                // setSigninMessage('Signin successful');
             } else {
                 // Signin failed, display the error message
-                // setSigninMessage(data.message);
+                setSigninMessage(data.message || 'Signin failed');
                 console.error('Signin failed:', data.message);
             }
         } catch (error) {
@@ -58,7 +67,7 @@ const Signin = () =>{
                             <input value={password} type="password" placeholder='Enter password' onChange={(e) => setPassword(e.target.value)}/>
                             <span className='icon2'><FontAwesomeIcon icon={faEyeSlash} /></span>
                         </div>
-                        <button className='btn' type='submit'>Sign In</button>
+                        <button className="btn" onClick={handelSubmit}>Sign In</button>
                     </div>
                 </form>
                 
@@ -68,7 +77,7 @@ const Signin = () =>{
                 </section>
             </div>
         </div>
-
+        {redirectToHome && <Navigate to="/" />}
     </ Layout>
     )
 } 

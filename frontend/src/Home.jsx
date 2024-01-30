@@ -1,12 +1,12 @@
 // Home.js
 import React from "react";
 import Layout from "./Layout";
-import Broadcast from "./broadcast/Broadcast";
-import Headsection from "./headSection/Headsection";
-import CryptoData from "./cryptoData/CryptoData";
-import Services from "./services/Services";
-import Help from "./help/Help";
-import RiskWarning from "./Risk/Risk";
+import Broadcast from "./componentshome/broadcast/Broadcast";
+import Headsection from "./componentshome/headSection/Headsection";
+import CryptoData from "./componentshome/cryptoData/CryptoData";
+import Services from "./componentshome/services/Services";
+import Help from "./componentshome/help/Help";
+import RiskWarning from "./componentshome/Risk/Risk";
 
 const Home = () => {
   return (

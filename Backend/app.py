@@ -78,7 +78,7 @@ def login():
 
     if bcrypt.checkpw(password.encode('utf-8'), hashed_password):
         access_token =  create_access_token(identity=username)
-        return jsonify({'message': 'Login successful', 'access_token': access_token})
+        return jsonify({'message': 'Login successful', 'access_token': access_token}),200
     else:
         return jsonify({'message': 'Login failed', 'error': 'Invalid credentials'}), 401
 # Remove the /signup route or keep it for user registration
